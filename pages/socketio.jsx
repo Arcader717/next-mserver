@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import io from 'socket.io-client'
 
-export default () => {
+function socket() {
   useEffect(() => {
     fetch('/api/socketio').finally(() => {
       const socket = io()
@@ -14,3 +14,5 @@ export default () => {
 
   return <h1>Socket.io</h1>
 }
+
+export default socket;
